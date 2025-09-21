@@ -109,6 +109,7 @@
 
 .scoreboard p {
   margin: 0;
+  white-space: nowrap;
 }
 
 .first-player-color {
