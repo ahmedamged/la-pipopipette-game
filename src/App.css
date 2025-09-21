@@ -1,6 +1,151 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  height: 100vh;
+  place-content: center;
+}
+
+.modal {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  min-width: 20%;
+}
+
+.modal-layout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal-select {
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: rgb(233, 233, 233);
+  color: #000000;
+  border: 2px solid #ffffff;
+  font-size: 20px;
+  outline: 2px solid rgb(192, 191, 191);
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  background-image: url('https://www.svgrepo.com/show/80156/down-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: calc(100% - 16px);
+  margin: 20px 0;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.modal-btn {
+  margin-top: 12px;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.player-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-names input {
+  border: 1px solid #000;
+  margin: 12px 10px;
+  border-radius: 3px;
+  padding: 7px 12px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 30px 0 60px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.scoreboard {
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.first-player-color {
+  color: darkblue;
+}
+
+.second-player-color {
+  color: maroon;
+}
+
+.reset-btn {
+  color: #000000;
+  padding-inline: 6rem;
+  padding-block: 1rem;
+  margin: 1rem;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #364153;
+  color: #ffffff;
+}
+
+.keep-playing-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.keep-playing-title {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    min-width: 80%;
+  }
+
+  .dot {
+    width: 35px;
+    height: 35px;
+  }
 }
