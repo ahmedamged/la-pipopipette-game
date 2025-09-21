@@ -26,13 +26,17 @@ export const GameModal = ({
             <option value="four-by-five">5 * 4</option>
           </select>
           <div className="player-names">
-            <label htmlFor="player1">First Player Name - &#40;X&#41;</label>
+            <label htmlFor="player1">
+              First Player Name - &#40;Darkblue&#41;
+            </label>
             <input
               type="text"
               id="player1"
               onChange={(e) => setFirstPlayer(e.target.value)}
             />
-            <label htmlFor="player2">Second Player Name - &#40;O&#41;</label>
+            <label htmlFor="player2">
+              Second Player Name - &#40;Maroon&#41;
+            </label>
             <input
               type="text"
               id="player2"
