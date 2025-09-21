@@ -1,12 +1,21 @@
-# React + Vite
+# La Pipopipette Game (Dots and Boxes)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d7bb52fd-2d9a-46c0-b68d-5138c0ff6241/deploy-status)](https://app.netlify.com/projects/la-pipopipette/deploys)
 
-Currently, two official plugins are available:
+## How to play
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Pencil and Paper Games - La Pipopipette Game (Dots and Boxes)](http://www.papg.com/show?1TMU)
 
-## Expanding the ESLint configuration
+**Players take turns in drawing lines between dots on a grid. The player who completes the most boxes wins.**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**_The game is played starting with a rectangular array of dots._**
+
+**_The two players take turns to join two adjacent dots with a horizontal or vertical line. If a player completes the fourth side of a box they initial that box and must draw another line._**
+
+**_When all the boxes have been completed the winner is the player who has initialled the most boxes._**
+
+**_The game is more complex than it initially appears, and even on a 4x4 grid there is plenty of opportunity for skilful play._**
+
+**Example: _The following game on a 3x3 grid is won by Blue, who scores 3 against Red's one_**
+
+![La Pipopipette](/public/images/la-pipopipette.png "La Pipopipette")
