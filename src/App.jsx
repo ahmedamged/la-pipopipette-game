@@ -281,6 +281,7 @@ function App() {
     setFirstPlayerRoundScore(0);
     setSecondPlayerRoundScore(0);
     boxesCompletedCount = 0;
+    setGameInstructions(true);
   };
 
   useEffect(() => {
