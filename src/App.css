@@ -153,4 +153,12 @@
     width: 35px;
     height: 35px;
   }
+
+  .board {
+    gap: 2.8rem;
+  }
+
+  .board-row {
+    gap: 2.8rem;
+  }
 }
