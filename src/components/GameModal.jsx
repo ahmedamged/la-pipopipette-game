@@ -6,6 +6,8 @@ export const GameModal = ({
   setBoardSize,
   setFirstPlayer,
   setSecondPlayer,
+  gameInstructionsShow,
+  setGameInstructionsShow,
 }) => {
   const handleStartBtn = () => {
     setIsShown((prev) => !prev);
@@ -42,6 +44,33 @@ export const GameModal = ({
               id="player2"
               onChange={(e) => setSecondPlayer(e.target.value)}
             />
+            <label>Show Game Instructions</label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="booleanOption"
+                  value="true"
+                  checked={gameInstructionsShow === true}
+                  onChange={(e) =>
+                    setGameInstructionsShow(e.target.value === "true")
+                  }
+                />
+                Yes
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="booleanOption"
+                  value="false"
+                  checked={gameInstructionsShow === false}
+                  onChange={(e) =>
+                    setGameInstructionsShow(e.target.value === "true")
+                  }
+                />
+                No
+              </label>
+            </div>
           </div>
           <button type="submit" className="modal-btn">
             Start Game

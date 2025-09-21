@@ -34,6 +34,7 @@ function App() {
   const [secondPlayerRoundScore, setSecondPlayerRoundScore] = useState(0);
   const [keepPlaying, setKeepPlaying] = useState(true);
   const [gameInstructions, setGameInstructions] = useState(true);
+  const [gameInstructionsShow, setGameInstructionsShow] = useState(false);
   const dotsRefs = useRef([]);
 
   const createDynamicMatrix = (rows, cols, initialValue = 0) => {
@@ -171,9 +172,13 @@ function App() {
     }
     if (completed) {
       setIsPlayer1((prev) => !prev);
-      setGameInstructions(false);
+      if (gameInstructionsShow) {
+        setGameInstructions(false);
+      }
     } else {
-      setGameInstructions(true);
+      if (gameInstructionsShow) {
+        setGameInstructions(true);
+      }
     }
   };
 
@@ -281,7 +286,9 @@ function App() {
     setFirstPlayerRoundScore(0);
     setSecondPlayerRoundScore(0);
     boxesCompletedCount = 0;
-    setGameInstructions(true);
+    if (gameInstructionsShow) {
+      setGameInstructions(true);
+    }
   };
 
   useEffect(() => {
@@ -316,6 +323,8 @@ function App() {
             setBoardSize={setBoardSize}
             setFirstPlayer={setFirstPlayer}
             setSecondPlayer={setSecondPlayer}
+            gameInstructionsShow={gameInstructionsShow}
+            setGameInstructionsShow={setGameInstructionsShow}
           />
         ) : null}
       </div>
@@ -352,11 +361,13 @@ function App() {
           </h3>
         </div>
       )}
-      {gameInstructions ? (
-        <p>Complete the largest number of boxes</p>
-      ) : (
-        <p>Your turn again</p>
-      )}
+      {gameInstructionsShow ? (
+        gameInstructions ? (
+          <p>Complete the largest number of boxes</p>
+        ) : (
+          <p>Your turn again</p>
+        )
+      ) : null}
       <div className="board">
         {board.map((row, rowIndex) => (
           <div key={rowIndex} className="board-row">
