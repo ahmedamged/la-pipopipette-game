@@ -166,6 +166,9 @@ function App() {
           boxesCompletedCount += 1;
           if (boxesCompletedCount === allBoxesCount) {
             setKeepPlaying(false);
+            if (gameInstructionsShow) {
+              setGameInstructions(true);
+            }
           }
         }
       }
