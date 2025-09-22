@@ -29,7 +29,8 @@ export const GameModal = ({
           </select>
           <div className="player-names">
             <label htmlFor="player1">
-              First Player Name - &#40;Darkblue&#41;
+              First Player Name -{" "}
+              <span className="first-player-color">&#40;Darkblue&#41;</span>
             </label>
             <input
               type="text"
@@ -37,7 +38,8 @@ export const GameModal = ({
               onChange={(e) => setFirstPlayer(e.target.value)}
             />
             <label htmlFor="player2">
-              Second Player Name - &#40;Maroon&#41;
+              Second Player Name -{" "}
+              <span className="second-player-color">&#40;Maroon&#41;</span>
             </label>
             <input
               type="text"
