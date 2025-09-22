@@ -353,11 +353,11 @@ function App() {
         <div className="keep-playing-section">
           <h3 className="keep-playing-title">
             {firstPlayer} &#40;Darkblue&#41; has won {firstPlayerRoundScore}{" "}
-            {firstPlayerScore === 1 ? "box" : "boxes"}
+            {firstPlayerRoundScore === 1 ? "box" : "boxes"}
           </h3>
           <h3 className="keep-playing-title">
             {secondPlayer} &#40;Maroon&#41; has won {secondPlayerRoundScore}{" "}
-            {secondPlayerScore === 1 ? "box" : "boxes"}
+            {secondPlayerRoundScore === 1 ? "box" : "boxes"}
           </h3>
         </div>
       )}
