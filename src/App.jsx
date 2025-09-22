@@ -166,9 +166,6 @@ function App() {
           boxesCompletedCount += 1;
           if (boxesCompletedCount === allBoxesCount) {
             setKeepPlaying(false);
-            if (gameInstructionsShow) {
-              setGameInstructions(true);
-            }
           }
         }
       }
@@ -367,8 +364,10 @@ function App() {
       {gameInstructionsShow ? (
         gameInstructions ? (
           <p>Complete the largest number of boxes</p>
-        ) : (
+        ) : keepPlaying ? (
           <p>Your turn again</p>
+        ) : (
+          <p>Game Over</p>
         )
       ) : null}
       <div className="board">
