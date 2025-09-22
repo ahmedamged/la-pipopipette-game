@@ -54,7 +54,7 @@
 }
 
 .modal-btn {
-  margin-top: 12px;
+  margin-top: 22px;
   border: 1px solid #000000;
   padding: 10px 20px;
   border-radius: 8px;
@@ -75,6 +75,34 @@
   margin: 12px 10px;
   border-radius: 3px;
   padding: 7px 12px;
+}
+
+.game-instructions-label {
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.game-options-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+}
+
+input[type="radio"]:checked+label {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.game-options-label:hover {
+  background-color: #e0e0e0;
 }
 
 .dot {

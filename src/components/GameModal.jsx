@@ -44,30 +44,34 @@ export const GameModal = ({
               id="player2"
               onChange={(e) => setSecondPlayer(e.target.value)}
             />
-            <label>Show Game Instructions</label>
+            <label className="game-instructions-label">
+              Show Game Instructions
+            </label>
             <div>
-              <label>
-                <input
-                  type="radio"
-                  name="booleanOption"
-                  value="true"
-                  checked={gameInstructionsShow === true}
-                  onChange={(e) =>
-                    setGameInstructionsShow(e.target.value === "true")
-                  }
-                />
+              <input
+                type="radio"
+                name="booleanOption"
+                value="true"
+                id="show-instructions"
+                checked={gameInstructionsShow === true}
+                onChange={(e) =>
+                  setGameInstructionsShow(e.target.value === "true")
+                }
+              />
+              <label className="game-options-label" htmlFor="show-instructions">
                 Yes
               </label>
-              <label>
-                <input
-                  type="radio"
-                  name="booleanOption"
-                  value="false"
-                  checked={gameInstructionsShow === false}
-                  onChange={(e) =>
-                    setGameInstructionsShow(e.target.value === "true")
-                  }
-                />
+              <input
+                type="radio"
+                name="booleanOption"
+                value="false"
+                id="hide-instructions"
+                checked={gameInstructionsShow === false}
+                onChange={(e) =>
+                  setGameInstructionsShow(e.target.value === "true")
+                }
+              />
+              <label className="game-options-label" htmlFor="hide-instructions">
                 No
               </label>
             </div>
