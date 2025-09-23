@@ -9,14 +9,15 @@ export const GameModal = ({
   gameInstructionsShow,
   setGameInstructionsShow,
 }) => {
-  const handleStartBtn = () => {
+  const handleStartBtn = (e) => {
+    e.preventDefault();
     setIsShown((prev) => !prev);
   };
   return (
     <div className="modal-layout">
       <div className="modal">
         <h1 className="modal-title">Size of Board</h1>
-        <form onSubmit={handleStartBtn}>
+        <form onSubmit={(e) => handleStartBtn(e)}>
           <select
             value={boardSize}
             onChange={(e) => setBoardSize(e.target.value)}
